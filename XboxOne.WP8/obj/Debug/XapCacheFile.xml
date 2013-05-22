@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.WP8_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="22/05/2013 09:28:17">
-  <file source="C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\XboxOne.WP8.dll" archivePath="XboxOne.WP8.dll" lastWriteTime="22/05/2013 09:28:16" />
+﻿<xapCache source="C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.WP8_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="22/05/2013 11:12:48">
+  <file source="C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\XboxOne.WP8.dll" archivePath="XboxOne.WP8.dll" lastWriteTime="22/05/2013 11:12:47" />
   <file source="C:\Projects\XboxOne\XboxOne.WP8\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="22/05/2013 05:16:13" />
   <file source="C:\Projects\XboxOne\XboxOne.WP8\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="22/05/2013 05:16:13" />
   <file source="C:\Projects\XboxOne\XboxOne.WP8\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="22/05/2013 05:16:13" />
@@ -13,7 +13,7 @@
   <file source="C:\Projects\XboxOne\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.dll" archivePath="Cirrious.MvvmCross.dll" lastWriteTime="22/05/2013 05:21:26" />
   <file source="C:\Projects\XboxOne\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.Localization.dll" archivePath="Cirrious.MvvmCross.Localization.dll" lastWriteTime="22/05/2013 05:20:47" />
   <file source="C:\Projects\XboxOne\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.WindowsPhone.dll" archivePath="Cirrious.MvvmCross.WindowsPhone.dll" lastWriteTime="22/05/2013 05:21:26" />
-  <file source="C:\Projects\XboxOne\XboxOne.Core\bin\Debug\XboxOne.Core.dll" archivePath="XboxOne.Core.dll" lastWriteTime="22/05/2013 09:28:15" />
+  <file source="C:\Projects\XboxOne\XboxOne.Core\bin\Debug\XboxOne.Core.dll" archivePath="XboxOne.Core.dll" lastWriteTime="22/05/2013 11:12:46" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="17/08/2011 02:48:22" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.xml" archivePath="System.Windows.Interactivity.xml" lastWriteTime="17/08/2011 02:30:36" />
   <file source="C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="22/05/2013 05:16:51" />

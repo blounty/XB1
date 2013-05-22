@@ -35,3 +35,4 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\ja\System.Windows.Interactivity.resour
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.WP8.dll.config

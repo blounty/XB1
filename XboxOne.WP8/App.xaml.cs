@@ -26,8 +26,6 @@ namespace XboxOne.WP8
         /// </summary>
         public App()
         {
-            var setup = new Setup(RootFrame);
-            setup.Initialize();
 
             // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
@@ -136,6 +134,10 @@ namespace XboxOne.WP8
 
             // Handle reset requests for clearing the backstack
             RootFrame.Navigated += CheckForResetNavigation;
+
+
+            var setup = new Setup(RootFrame);
+            setup.Initialize();
 
             // Ensure we don't initialize again
             phoneApplicationInitialized = true;
