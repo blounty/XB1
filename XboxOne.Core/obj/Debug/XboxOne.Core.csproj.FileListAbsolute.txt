@@ -1,0 +1,7 @@
+C:\Projects\XboxOne\XboxOne.Core\bin\Debug\XboxOne.Core.dll
+C:\Projects\XboxOne\XboxOne.Core\bin\Debug\XboxOne.Core.pdb
+C:\Projects\XboxOne\XboxOne.Core\bin\Debug\Cirrious.CrossCore.dll
+C:\Projects\XboxOne\XboxOne.Core\bin\Debug\Cirrious.MvvmCross.dll
+C:\Projects\XboxOne\XboxOne.Core\bin\Debug\Cirrious.MvvmCross.Localization.dll
+C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.dll
+C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.pdb
