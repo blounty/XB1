@@ -169,9 +169,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XboxOne.Core\XboxOne.Core.csproj">
-      <Project>{08D0924F-75E6-48EB-8B77-5476D412CE6C}</Project>
-      <Name>XboxOne.Core</Name>
+    <ProjectReference Include="..\XboxOne.Core.WP8\XboxOne.Core.WP8.csproj">
+      <Project>{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}</Project>
+      <Name>XboxOne.Core.WP8</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

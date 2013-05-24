@@ -22,9 +22,7 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Cirrious.CrossCore.WindowsPhone.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.Localization.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.WindowsPhone.dll
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Windows.Interactivity.dll
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.pdb
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Windows.Interactivity.xml
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\de\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\en\System.Windows.Interactivity.resources.dll
@@ -36,3 +34,11 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\ko\System.Windows.Interactivity.resour
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.WP8.dll.config
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.pdb
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.Phone.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.xml
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.Phone.xml
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.xml
