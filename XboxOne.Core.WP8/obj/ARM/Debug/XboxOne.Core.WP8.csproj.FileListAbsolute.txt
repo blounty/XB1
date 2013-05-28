@@ -24,3 +24,4 @@ C:\Projects\XboxOne\XboxOne.Core.WP8\Bin\ARM\Debug\zh-Hans\System.Windows.Intera
 C:\Projects\XboxOne\XboxOne.Core.WP8\Bin\ARM\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Projects\XboxOne\XboxOne.Core.WP8\obj\ARM\Debug\XboxOne.Core.WP8.dll
 C:\Projects\XboxOne\XboxOne.Core.WP8\obj\ARM\Debug\XboxOne.Core.WP8.pdb
+C:\Projects\xboxone\XboxOne.Core.WP8\obj\ARM\Debug\XboxOne.Core.WP8.csprojResolveAssemblyReference.cache

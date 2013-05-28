@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{5d99a928-5d45-4744-823d-ce84bd5243da}" Title="XboxOne.WP8" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="XboxOne.WP8 author" Description="Sample description" Publisher="XboxOne.WP8" PublisherID="{fbba15cf-b6d2-4cce-9811-b95b7ecdef5b}">
+  <Languages xmlns="">
+    <Language code="en" />
+  </Languages>
+  <App xmlns="" ProductID="{5d99a928-5d45-4744-823d-ce84bd5243da}" Title="Xbox One" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Alex Blount" Description="All of the Xbox One news you need in one place. News is updated regularly and current tweets about the Xbox One are displayed.&#xD;&#xA;&#xD;&#xA;Coming Soon&#xD;&#xA;&#xD;&#xA;Launch Countdown&#xD;&#xA;Pre-Order Notifications&#xD;&#xA;Stock Notifications" Publisher="Inked Dev" PublisherID="{fbba15cf-b6d2-4cce-9811-b95b7ecdef5b}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -9,6 +12,9 @@
       <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -19,12 +25,15 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>XboxOne.WP8</Title>
+          <Title>Xbox One</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileLarge.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
           <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge></HasLarge>
+          <HasLarge>True</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

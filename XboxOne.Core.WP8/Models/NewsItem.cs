@@ -5,11 +5,13 @@ namespace XboxOne.Core.Models
 {
     public class NewsItem
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string Author { get; set; }
 
         public string Source { get; set; }
+
+        public string SourceAuthor { get { return (!string.IsNullOrEmpty(this.Source) && !string.IsNullOrEmpty(this.Author)) ? string.Format("{0}/{1}", this.Source, this.Author) : (string.IsNullOrEmpty(this.Source) ? this.Author : this.Source); } }
 
         public string Title { get; set; }
 
@@ -24,32 +26,35 @@ namespace XboxOne.Core.Models
             return await Task.Run<NewsItem>(() =>
                 {
                     var newsItem = new NewsItem();
-                    if (!string.IsNullOrEmpty((string) parseObject["Author"]))
+
+                    newsItem.Id = (string)parseObject.ObjectId;
+
+                    if (parseObject.ContainsKey("Author"))
                     {
                         newsItem.Author = (string) parseObject["Author"];
                     }
 
-                    if (!string.IsNullOrEmpty((string) parseObject["ImageUrl"]))
+                    if (parseObject.ContainsKey("ImageUrl"))
                     {
                         newsItem.ImageUrl = (string) parseObject["ImageUrl"];
                     }
 
-                    if (!string.IsNullOrEmpty((string)parseObject["Source"]))
+                    if (parseObject.ContainsKey("Source"))
                     {
                         newsItem.Source = (string)parseObject["Source"];
                     }
 
-                    if (!string.IsNullOrEmpty((string)parseObject["Summary"]))
+                    if (parseObject.ContainsKey("Summary"))
                     {
                         newsItem.Summary = (string)parseObject["Summary"];
                     }
 
-                    if (!string.IsNullOrEmpty((string)parseObject["Title"]))
+                    if (parseObject.ContainsKey("Title"))
                     {
                         newsItem.Title = (string)parseObject["Title"];
                     }
 
-                    if (!string.IsNullOrEmpty((string)parseObject["Url"]))
+                    if (parseObject.ContainsKey("Url"))
                     {
                         newsItem.Url = (string)parseObject["Url"];
                     }
