@@ -40,8 +40,8 @@ namespace XboxOne.Core.Models
             }
         }
 
-        private DateTime publishDate;
-        public DateTime PublishDate
+        private string publishDate;
+        public string PublishDate
         {
             get
             { return publishDate; }

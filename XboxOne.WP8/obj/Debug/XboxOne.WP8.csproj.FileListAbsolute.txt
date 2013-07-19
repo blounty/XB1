@@ -15,7 +15,6 @@ C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Cirrious.CrossCore.WindowsPhone.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.Localization.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Cirrious.MvvmCross.WindowsPhone.dll
-C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\GalaSoft.MvvmLight.Extras.WP8.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Microsoft.Advertising.Mobile.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\microsoft.advertising.mobile.ui.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
@@ -24,16 +23,13 @@ C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Parse.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\System.Net.Http.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.dll
-C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\System.Net.Http.Primitives.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.pdb
-C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\GalaSoft.MvvmLight.Extras.WP8.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Microsoft.Advertising.Mobile.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\microsoft.advertising.mobile.ui.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Parse.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\System.Net.Http.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.xml
-C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\System.Net.Http.Primitives.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
@@ -76,3 +72,6 @@ C:\Projects\xboxone\XboxOne.WP8\obj\Debug\XboxOne.WP8.csproj.GenerateResource.Ca
 C:\Projects\xboxone\XboxOne.WP8\obj\Debug\XboxOne.WP8.dll
 C:\Projects\xboxone\XboxOne.WP8\obj\Debug\XboxOne.WP8.pdb
 C:\Projects\xboxone\XboxOne.WP8\obj\Debug\XapCacheFile.xml
+C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\XboxOne.PeriodicTask.dll
+C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\XboxOne.PeriodicTask.pdb
+C:\Projects\xboxone\XboxOne.WP8\Bin\Debug\FlurryWP8SDK.dll

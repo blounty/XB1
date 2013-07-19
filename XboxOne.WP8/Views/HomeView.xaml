@@ -7,14 +7,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
-    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
-    xmlns:commandbinding="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WP8"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:controls="S"
+    xmlns:converters="clr-namespace:XboxOne.WP8.Converters"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
+    <views:MvxPhonePage.Resources>
+        <converters:TimeAgoConverter x:Key="TimeAgoConverter"/>
+    </views:MvxPhonePage.Resources>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" Click="ApplicationBarIconButton_Click" Text="refresh" />
@@ -26,22 +31,28 @@
 
         <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <phone:Panorama Title="Xbox One">
+        <phone:Panorama Title="XB1 News">
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/XboxOne.WP8;component/Assets/PanoramaBackground.png"/>
             </phone:Panorama.Background>
 
             <!--Panorama item one-->
             <phone:PanoramaItem Header="news">
-                <phone:LongListSelector Grid.Row="0" x:Name="NewsList" Margin="0,0,-22,0" ItemsSource="{Binding NewsItems}" SelectionChanged="NewsList_SelectionChanged">
+                <phone:LongListSelector Grid.Row="0" x:Name="NewsList" ItemsSource="{Binding NewsItems}" SelectionChanged="NewsList_SelectionChanged">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="0,-6,0,12">
-                                <Image Source="{Binding ImageUrl}" Width="100" VerticalAlignment="Top"/>
-                                <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <toolkit:ContextMenuService.ContextMenu>
+                                    <toolkit:ContextMenu>
+                                        <toolkit:MenuItem Header="Share" Click="MenuItem_Click" Tag="{Binding Id}"/>
+                                    </toolkit:ContextMenu>
+                                </toolkit:ContextMenuService.ContextMenu>
+                                <Image Source="{Binding ImageUrl}" Width="100" VerticalAlignment="Top" Margin="0,10,0,0"/>
+                                <StackPanel VerticalAlignment="Top">
                                     <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"/>
                                     <TextBlock Text="{Binding SourceAuthor}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
                                     <TextBlock Text="{Binding Summary}" Width="300" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" FontSize="{StaticResource PhoneFontSizeNormal}"/>
+                                    <TextBlock Text="{Binding CreatedAt, Converter={StaticResource TimeAgoConverter}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -51,11 +62,11 @@
 
             <!--Panorama item two-->
             <phone:PanoramaItem Header="tweets">
-                    <phone:LongListSelector x:Name="TweetsList" Margin="0,0,-22,0" ItemsSource="{Binding TwitterItems}" SelectionChanged="TweetsList_SelectionChanged">
+                    <phone:LongListSelector x:Name="TweetsList" ItemsSource="{Binding TwitterItems}" SelectionChanged="TweetsList_SelectionChanged">
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Margin="0,-6,0,12">
-                                    <Image Source="{Binding AvatarUrl}" Width="100" VerticalAlignment="Top"/>
+                                <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding AvatarUrl}" Width="100" VerticalAlignment="Top" Margin="0,10,0,0"/>
                                     <StackPanel>
                                         <TextBlock Text="{Binding Author}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"/>
                                         <TextBlock Text="{Binding PublishDate}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>

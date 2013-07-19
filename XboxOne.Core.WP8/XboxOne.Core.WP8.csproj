@@ -87,6 +87,7 @@
     <Compile Include="Models\NewsItem.cs" />
     <Compile Include="Models\TwitterItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NewsService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\WebContentViewModel.cs" />
   </ItemGroup>
@@ -109,14 +110,17 @@
     <Reference Include="Cirrious.MvvmCross.WindowsPhone">
       <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Parse.1.2.4\lib\wp8\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Parse.1.2.5\lib\wp8\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Parse">
-      <HintPath>..\packages\Parse.1.2.4\lib\wp8\Parse.dll</HintPath>
+    <Reference Include="Parse, Version=1.2.5.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Parse.1.2.5\lib\wp8\Parse.dll</HintPath>
     </Reference>
-    <Reference Include="Parse.Phone">
-      <HintPath>..\packages\Parse.1.2.4\lib\wp8\Parse.Phone.dll</HintPath>
+    <Reference Include="Parse.Phone, Version=1.2.5.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Parse.1.2.5\lib\wp8\Parse.Phone.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.1.6-rc\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>

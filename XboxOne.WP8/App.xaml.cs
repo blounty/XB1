@@ -9,6 +9,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using XboxOne.WP8.Resources;
+using XboxOne.PeriodicTask;
+using Microsoft.Phone.Scheduler;
 
 namespace XboxOne.WP8
 {
@@ -43,7 +45,7 @@ namespace XboxOne.WP8
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                //Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
@@ -64,6 +66,25 @@ namespace XboxOne.WP8
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             RootFrame.Navigating += RootFrameOnNavigating;
+
+            FlurryWP8SDK.Api.StartSession("7B4FZFCPZB4MFWWC5MKW");
+
+            Microsoft.Phone.Scheduler.PeriodicTask tileUpdaterPeriodicTask;
+
+            string taskName = "LiveTileUpdater";
+
+            tileUpdaterPeriodicTask = ScheduledActionService.Find(taskName) as Microsoft.Phone.Scheduler.PeriodicTask;
+
+            if (tileUpdaterPeriodicTask != null)
+            {
+                ScheduledActionService.Remove(taskName);
+                return;
+            }
+
+            tileUpdaterPeriodicTask = new Microsoft.Phone.Scheduler.PeriodicTask(taskName);
+            tileUpdaterPeriodicTask.Description = "XB1 Tile Updater";
+
+            ScheduledActionService.Add(tileUpdaterPeriodicTask);
         }
 
         private void RootFrameOnNavigating(object sender, NavigatingCancelEventArgs args)
@@ -77,7 +98,7 @@ namespace XboxOne.WP8
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-
+            FlurryWP8SDK.Api.StartSession("7B4FZFCPZB4MFWWC5MKW");
         }
 
         // Code to execute when the application is deactivated (sent to background)

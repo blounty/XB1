@@ -4,6 +4,8 @@ using Microsoft.Phone.Shell;
 using System.Windows.Data;
 using XboxOne.Core.Models;
 using XboxOne.Core.ViewModels;
+using System.Linq;
+using Microsoft.Phone.Tasks;
 
 namespace XboxOne.WP8.Views
 {
@@ -113,6 +115,21 @@ namespace XboxOne.WP8.Views
         private void ApplicationBarMenuItem_Click(object sender, System.EventArgs e)
         {
             ((HomeViewModel)this.ViewModel).ShowPrivacyPolicy("http://myapppolicy.com/app/xboxone");
+        }
+
+        private void MenuItem_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var itemId = ((MenuItem)sender).Tag;
+
+            var newsItem = ((HomeViewModel)this.ViewModel).NewsItems.FirstOrDefault(x => x.Id == itemId);
+
+            var shareTask = new ShareLinkTask();
+
+            shareTask.LinkUri = new System.Uri(newsItem.Url);
+            shareTask.Message = string.Format("{0} :- Read on XB1 for Windows Phone", newsItem.Summary);
+            shareTask.Title = newsItem.Title;
+
+            shareTask.Show();
         }
     }
 }

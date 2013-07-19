@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Parse;
+using System;
 
 namespace XboxOne.Core.Models
 {
@@ -20,6 +21,8 @@ namespace XboxOne.Core.Models
         public string ImageUrl { get; set; }
 
         public string Url { get; set; }
+
+        public DateTime CreatedAt { get; set; }
 
         public static async Task<NewsItem> CreateFromParseObject(ParseObject parseObject)
         {
@@ -58,6 +61,9 @@ namespace XboxOne.Core.Models
                     {
                         newsItem.Url = (string)parseObject["Url"];
                     }
+
+                    newsItem.CreatedAt = parseObject.CreatedAt.HasValue ? parseObject.CreatedAt.Value : DateTime.Now;
+
                     return newsItem;
                 });
         }

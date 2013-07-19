@@ -30,4 +30,3 @@ C:\Projects\xboxone\XboxOne.Core.WP8\Bin\Release\zh-Hans\System.Windows.Interact
 C:\Projects\xboxone\XboxOne.Core.WP8\Bin\Release\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Projects\xboxone\XboxOne.Core.WP8\obj\Release\XboxOne.Core.WP8.dll
 C:\Projects\xboxone\XboxOne.Core.WP8\obj\Release\XboxOne.Core.WP8.pdb
-C:\Projects\xboxone\XboxOne.Core.WP8\obj\Release\XboxOne.Core.WP8.csprojResolveAssemblyReference.cache
