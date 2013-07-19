@@ -5,9 +5,8 @@ using System;
 namespace XboxOne.Core.Models
 {
     public class NewsItem
+        : BaseModel
     {
-        public string Id { get; set; }
-
         public string Author { get; set; }
 
         public string Source { get; set; }

@@ -1,5 +1,7 @@
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Plugins;
+using Cirrious.MvvmCross.Plugins.Bookmarks;
+using Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
@@ -16,5 +18,12 @@ namespace XboxOne.WP8
         {
             return new Core.App();
         }
+        protected override void PerformBootstrapActions()
+        {
+            base.PerformBootstrapActions();
+
+            Mvx.RegisterSingleton<IMvxBookmarkLibrarian>(new MvxWindowsPhoneLiveTileBookmarkLibrarian());
+        }
+
     }
 }

@@ -1,0 +1,67 @@
+﻿<views:MvxPhonePage
+    x:Class="XboxOne.WP8.Views.GameView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:converters="clr-namespace:XboxOne.WP8.Converters"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <views:MvxPhonePage.Resources>
+        <converters:TimeAgoConverter x:Key="TimeAgoConverter"/>
+    </views:MvxPhonePage.Resources>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" Click="Refresh_Click" Text="refresh" />
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/new.png" Click="Pin_Click" Text="add to start" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama Title="{Binding Game.Name}">
+            <phone:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontSize="100"/>
+                </DataTemplate>
+            </phone:Panorama.TitleTemplate>
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="/XboxOne.WP8;component/Assets/PanoramaBackground.png"/>
+            </phone:Panorama.Background>
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="Information">
+                <StackPanel>
+                    <Image Source="{Binding Game.ImageUrl}" VerticalAlignment="Top" Margin="0,10,0,0"/>
+                    <TextBlock Text="{Binding Game.Detail}" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                </StackPanel>
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="news">
+                <phone:LongListSelector Grid.Row="0" x:Name="NewsList" ItemsSource="{Binding NewsItems}" SelectionChanged="NewsList_SelectionChanged">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding ImageUrl}" Width="100" VerticalAlignment="Top" Margin="0,10,0,0"/>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                                    <TextBlock Text="{Binding SourceAuthor}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+                                    <TextBlock Text="{Binding Summary}" Width="300" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" FontSize="{StaticResource PhoneFontSizeNormal}"/>
+                                    <TextBlock Text="{Binding CreatedAt, Converter={StaticResource TimeAgoConverter}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+    </Grid>
+
+    </views:MvxPhonePage>

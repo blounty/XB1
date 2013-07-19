@@ -22,7 +22,7 @@
     </views:MvxPhonePage.Resources>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" Click="ApplicationBarIconButton_Click" Text="refresh" />
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" Click="Refresh_Click" Text="refresh" />
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Click="ApplicationBarMenuItem_Click" Text="Privacy Policy"/>
             </shell:ApplicationBar.MenuItems>
@@ -32,6 +32,11 @@
         <Grid x:Name="LayoutRoot" Background="Transparent">
 
         <phone:Panorama Title="XB1 News">
+            <phone:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontSize="100"/>
+                </DataTemplate>
+            </phone:Panorama.TitleTemplate>
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/XboxOne.WP8;component/Assets/PanoramaBackground.png"/>
             </phone:Panorama.Background>
@@ -61,6 +66,23 @@
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
+            <phone:PanoramaItem Header="games">
+                <phone:LongListSelector Grid.Row="0" x:Name="GamesList" ItemsSource="{Binding Games}" SelectionChanged="GamesList_SelectionChanged">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding ImageUrl}" Width="100" VerticalAlignment="Top" Margin="0,10,0,0"/>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                                    <TextBlock Text="{Binding PublisherDeveloper}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+
+            <!--Panorama item three-->
             <phone:PanoramaItem Header="tweets">
                     <phone:LongListSelector x:Name="TweetsList" ItemsSource="{Binding TwitterItems}" SelectionChanged="TweetsList_SelectionChanged">
                         <phone:LongListSelector.ItemTemplate>
@@ -77,6 +99,7 @@
                         </phone:LongListSelector.ItemTemplate>
                     </phone:LongListSelector>
             </phone:PanoramaItem>
+            
         </phone:Panorama>
     </Grid>
 

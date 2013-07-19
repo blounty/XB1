@@ -100,14 +100,27 @@ namespace XboxOne.WP8.Views
             }
         }
 
+        private void GamesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                var addedItem = e.AddedItems[0] as Game;
+                if (addedItem != null)
+                {
+                    ((HomeViewModel)this.ViewModel).GameSelected(addedItem);
+                }
+            }
+        }
+
         protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedFrom(e);
             this.NewsList.SelectedItem = null;
             this.TweetsList.SelectedItem = null;
+            this.GamesList.SelectedItem = null;
         }
 
-        private async void ApplicationBarIconButton_Click(object sender, System.EventArgs e)
+        private async void Refresh_Click(object sender, System.EventArgs e)
         {
             await ((HomeViewModel)this.ViewModel).RefreshAllData();
         }

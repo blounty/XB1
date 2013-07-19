@@ -5,6 +5,8 @@ using XboxOne.Core.WP8.Services;
 using Microsoft.Phone.Shell;
 using System.Linq;
 using Parse;
+using System;
+using System.Collections.Generic;
 
 namespace XboxOne.PeriodicTask
 {
@@ -45,24 +47,56 @@ namespace XboxOne.PeriodicTask
         {
             try
             {
-                ParseClient.Initialize("5yU6Uf5QqT066zOB52KBZBAhf9qnrRPVlZrRzvp7", "pjPDnc7GZKERP3yiAw9sP3lXy7RRXwEaG4CGN8Qp");
-
                 var newsService = new NewsService();
-                var newsItems = await newsService.LoadNews(1, 0);
 
-                ShellTile appTile = ShellTile.ActiveTiles.First();
+                List<ShellTile> appTiles = ShellTile.ActiveTiles.ToList();
+                    
+                 var appTile = appTiles.Where(tile => tile.NavigationUri.ToString() == "/").FirstOrDefault();
 
-                var tileData = new FlipTileData()
+                if (appTile != null)
                 {
-                    BackContent = newsItems[0].Summary,
-                    BackTitle = newsItems[0].Title,
-                    WideBackContent = newsItems[0].Summary,
-                    BackgroundImage = new System.Uri(newsItems[0].ImageUrl),
-                    WideBackgroundImage =  new System.Uri(newsItems[0].ImageUrl),
-                    Title = "XB1"
-                };
+                    ParseClient.Initialize("5yU6Uf5QqT066zOB52KBZBAhf9qnrRPVlZrRzvp7", "pjPDnc7GZKERP3yiAw9sP3lXy7RRXwEaG4CGN8Qp");
 
-                appTile.Update(tileData);
+                   
+
+                    var newsItems = await newsService.LoadNews(1, 0);
+
+                    var tileData = new FlipTileData()
+                    {
+                        BackContent = newsItems[0].Summary.Length > 25 ? newsItems[0].Summary.Substring(0,24) + "..." : newsItems[0].Summary,
+                        BackTitle = newsItems[0].Title,
+                        WideBackContent = newsItems[0].Summary,
+                        BackgroundImage = new System.Uri(newsItems[0].ImageUrl),
+                        WideBackgroundImage = new System.Uri(newsItems[0].ImageUrl),
+                        Title = "XB1"
+                    };
+
+                    appTile.Update(tileData);
+                }
+
+                var secondaryTiles = ShellTile.ActiveTiles.Where(tile => tile.NavigationUri.ToString().Contains("&_id="));
+                var gameService = new GameService();
+                foreach (var tile in secondaryTiles)
+                {
+                    var gameId = tile.NavigationUri.ToString().Split(new []{"&_id="}, StringSplitOptions.RemoveEmptyEntries)[1];
+                    var newsItems = newsService.LoadNewsByGameId(gameId).Result;
+                    var game = gameService.LoadGameById(gameId).Result;
+                    if (newsItems.Count > 0)
+                    {
+                        var tileData = new FlipTileData()
+                        {
+                            BackContent = newsItems[0].Summary.Length > 25 ? newsItems[0].Summary.Substring(0,24) + "..." : newsItems[0].Summary,
+                            BackTitle = newsItems[0].Title,
+                            WideBackContent = newsItems[0].Summary,
+                            BackgroundImage = new System.Uri(newsItems[0].ImageUrl),
+                            WideBackgroundImage = new System.Uri(newsItems[0].ImageUrl),
+                            Title = string.Format("XB1 - {0}", game.Name)
+                        };
+                        tile.Update(tileData);
+                    }
+                    
+                }
+
             }
             finally
             {

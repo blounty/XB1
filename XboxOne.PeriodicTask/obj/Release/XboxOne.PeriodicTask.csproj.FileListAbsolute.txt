@@ -19,3 +19,4 @@ C:\Projects\xboxone\XboxOne.PeriodicTask\Bin\Release\System.Net.Http.Primitives.
 C:\Projects\xboxone\XboxOne.PeriodicTask\obj\Release\XboxOne.PeriodicTask.csprojResolveAssemblyReference.cache
 C:\Projects\xboxone\XboxOne.PeriodicTask\obj\Release\XboxOne.PeriodicTask.dll
 C:\Projects\xboxone\XboxOne.PeriodicTask\obj\Release\XboxOne.PeriodicTask.pdb
+C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.dll

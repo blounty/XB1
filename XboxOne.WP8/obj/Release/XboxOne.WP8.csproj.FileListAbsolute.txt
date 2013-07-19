@@ -129,3 +129,7 @@ C:\Projects\xboxone\XboxOne.WP8\Bin\Release\uz-Latn-UZ\Microsoft.Phone.Controls.
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.Phone.Controls.dll
+C:\Projects\XboxOne\XboxOne.WP8\obj\Release\Views\GameView.g.cs
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone.dll

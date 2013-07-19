@@ -11,6 +11,7 @@ using Microsoft.Phone.Shell;
 using XboxOne.WP8.Resources;
 using XboxOne.PeriodicTask;
 using Microsoft.Phone.Scheduler;
+using Cirrious.CrossCore;
 
 namespace XboxOne.WP8
 {
@@ -89,9 +90,14 @@ namespace XboxOne.WP8
 
         private void RootFrameOnNavigating(object sender, NavigatingCancelEventArgs args)
         {
-            args.Cancel = true;
             RootFrame.Navigating -= RootFrameOnNavigating;
-            RootFrame.Dispatcher.BeginInvoke(() => { Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>().Start(); });
+
+            var applicationStart = Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>();
+            if (args.Uri.ToString().Contains("MainPage.xaml"))
+            {
+                args.Cancel = true;
+                RootFrame.Dispatcher.BeginInvoke(() => { applicationStart.Start(); });
+            }
         }
 
         // Code to execute when the application is activated (brought to foreground)

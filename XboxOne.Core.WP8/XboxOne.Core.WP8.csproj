@@ -84,10 +84,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Bootstrap\BookmarksPluginBootstrap.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Game.cs" />
     <Compile Include="Models\NewsItem.cs" />
     <Compile Include="Models\TwitterItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\NewsService.cs" />
+    <Compile Include="Services\TwitterService.cs" />
+    <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\WebContentViewModel.cs" />
   </ItemGroup>
@@ -95,17 +101,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\sl4-wp71\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.9\lib\sl4-wp71\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.WindowsPhone">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\sl4-wp71\Cirrious.CrossCore.WindowsPhone.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.9\lib\sl4-wp71\Cirrious.CrossCore.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.Localization.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.9\lib\sl4-wp71\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Bookmarks">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Bookmarks.3.0.9\lib\sl4-wp71\Cirrious.MvvmCross.Plugins.Bookmarks.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Bookmarks.3.0.9\lib\sl4-wp71\Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsPhone">
       <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>

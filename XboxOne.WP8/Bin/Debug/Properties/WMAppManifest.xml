@@ -4,17 +4,13 @@
   <Languages xmlns="">
     <Language code="en" />
   </Languages>
-  <App xmlns="" ProductID="{5d99a928-5d45-4744-823d-ce84bd5243da}" Title="XB1" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Alex Blount" Description="All of the Xbox One news you need in one place. News is updated regularly and current tweets about the Xbox One are displayed.&#xD;&#xA;&#xD;&#xA;Coming Soon&#xD;&#xA;&#xD;&#xA;Launch Countdown&#xD;&#xA;Pre-Order Notifications&#xD;&#xA;Stock Notifications" Publisher="Inked Dev" PublisherID="{fbba15cf-b6d2-4cce-9811-b95b7ecdef5b}">
+  <App xmlns="" ProductID="{5d99a928-5d45-4744-823d-ce84bd5243da}" Title="XB1" RuntimeType="Silverlight" Version="1.1.0.0" Genre="apps.normal" Author="Alex Blount" Description="All of the Xbox One news you need in one place. News is updated regularly and current tweets about the Xbox One are displayed.&#xD;&#xA;&#xD;&#xA;Coming Soon&#xD;&#xA;&#xD;&#xA;Launch Countdown&#xD;&#xA;Pre-Order Notifications&#xD;&#xA;Stock Notifications" Publisher="Inked Dev" PublisherID="{fbba15cf-b6d2-4cce-9811-b95b7ecdef5b}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
-      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
-      <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
       <Capability Name="ID_CAP_IDENTITY_USER" />
-      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
-      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />

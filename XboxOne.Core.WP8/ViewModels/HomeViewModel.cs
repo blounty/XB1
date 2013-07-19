@@ -18,19 +18,22 @@ namespace XboxOne.Core.ViewModels
     public class HomeViewModel 
 		: MvxViewModel
     {
-        const string TWEET_URI = "https://api.twitter.com/1.1/search/tweets.json";
+        private TwitterService twitterService;
 
-        const string TWEET_AUTH_URL = "https://api.twitter.com/oauth2/token";
-
-        private string twitterAccessToken = "";
-
-        private string tweetQueryString = "?q=xboxone";
+        private GameService gameService;
 
         private ObservableCollection<NewsItem> newsItems;
         public ObservableCollection<NewsItem> NewsItems
         {
             get { return newsItems; }
             set { newsItems = value; RaisePropertyChanged(() => this.NewsItems); }
+        }
+
+        private ObservableCollection<Game> games;
+        public ObservableCollection<Game> Games
+        {
+            get { return games; }
+            set { games = value; RaisePropertyChanged(() => this.Games); }
         }
 
         private ObservableCollection<TwitterItem> twitterItems;
@@ -40,7 +43,6 @@ namespace XboxOne.Core.ViewModels
             get { return twitterItems; }
             set { twitterItems = value; RaisePropertyChanged(() => this.TwitterItems); }
         }
-
 
         private bool isLoading;
 
@@ -57,13 +59,21 @@ namespace XboxOne.Core.ViewModels
 
         public HomeViewModel()
         {
+            this.twitterService = new TwitterService("xboxone", 20);
             this.NewsItems = new ObservableCollection<NewsItem>();
             this.TwitterItems = new ObservableCollection<TwitterItem>();
+            this.Games = new ObservableCollection<Game>();
+            this.gameService = new GameService();
         }
 
         public void NewsItemSelected(NewsItem newsItem)
         {
             this.ShowViewModel<WebContentViewModel>(new { contentUrl = newsItem.Url });
+        }
+
+        public void GameSelected(Game game)
+        {
+            this.ShowViewModel<GameViewModel>(new { gameId = game.Id });
         }
 
         public void TwitterItemSelected(TwitterItem twitterItem)
@@ -90,10 +100,13 @@ namespace XboxOne.Core.ViewModels
 
             this.NewsItems.Clear();
             this.TwitterItems.Clear();
+            this.Games.Clear();
 
-            this.tweetQueryString = "?q=xboxone&count=20";
+            this.twitterService.ResetFilters();
 
             await this.LoadNews(20, 0);
+
+            await this.LoadGames();
 
             await this.AuthorizeTwitter();
 
@@ -115,30 +128,33 @@ namespace XboxOne.Core.ViewModels
                     this.NewsItems.Add(nI);
                 }
             }));
+
             this.IsLoading = false;
-           
         }
+
+        public async Task LoadGames()
+        {
+            this.IsLoading = true;
+
+            var games = await gameService.LoadGames();
+
+            games.ForEach((g =>
+            {
+                if (!this.Games.Any(x => x.Id == g.Id))
+                {
+                    this.Games.Add(g);
+                }
+            }));
+            this.IsLoading = false;
+        }
+
         private async Task AuthorizeTwitter()
         {
             this.IsLoading = true;
 
-            try
-            {
-                var authTokens = "QUZksaqAdqZFxefaQ5cPQ:9vNnFn1SrtUAoWa1eNXjTFNpySQN2b5icTs10uDE4g";
+            var success = await this.twitterService.AuthorizeTwitter();
 
-                var base64AuthTokens = Convert.ToBase64String(System.Text.UTF8Encoding.UTF8.GetBytes(authTokens));
-
-                var twitterAuthClient = new HttpClient();
-
-                twitterAuthClient.DefaultRequestHeaders.Add("Authorization", string.Format("Basic {0}", base64AuthTokens));
-                var content = new StringContent("grant_type=client_credentials", Encoding.UTF8, "application/x-www-form-urlencoded");
-                var response = await twitterAuthClient.PostAsync(TWEET_AUTH_URL, content);
-
-                var responseJson = JValue.Parse(await response.Content.ReadAsStringAsync());
-
-                this.twitterAccessToken = responseJson["access_token"].ToString();
-            }
-            catch (Exception)
+            if (!success)
             {
                 this.TwitterItems.Clear();
                 var twitterItem = new TwitterItem
@@ -148,69 +164,24 @@ namespace XboxOne.Core.ViewModels
                     Tweet = "error, please retry...",
                     Id = ""
                 };
-                
+
                 this.TwitterItems.Add(twitterItem);
             }
+
             this.IsLoading = false;
 
         }
 
-       
-
-
         public async Task LoadTweets()
         {
-            if (string.IsNullOrEmpty(this.twitterAccessToken))
-            {
-                return;
-            }
             this.IsLoading = true;
 
-            var tweetClient = new HttpClient();
+            var tweets = await this.twitterService.LoadTweets();
 
-            tweetClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + this.twitterAccessToken);
-            try
+            tweets.ForEach((tweet) =>
             {
-                var response = await tweetClient.GetAsync(string.Format("{0}{1}", TWEET_URI, this.tweetQueryString));
-
-                var jsonString = await response.Content.ReadAsStringAsync();
-                var resultsJson = JObject.Parse(jsonString);
-
-               
-
-                var tweetArrayJson = (JArray)resultsJson["statuses"];
-
-                foreach (JObject tweetJson in tweetArrayJson)
-                {
-                    var twitterItem = new TwitterItem
-                    {
-                        Author = tweetJson["user"]["screen_name"].Value<string>(),
-                        AvatarUrl = tweetJson["user"]["profile_image_url"].Value<string>(),
-                        Tweet = tweetJson["text"].Value<string>(),
-                        Id = tweetJson["id"].Value<string>()
-                    };
-                    var createdDateString = tweetJson["created_at"].Value<string>();
-
-                    twitterItem.PublishDate = createdDateString.Remove(createdDateString.Length - 11);
-                    this.TwitterItems.Add(twitterItem);
-                }
-            }
-            catch (Exception)
-            {
-                this.TwitterItems.Clear();
-                var twitterItem = new TwitterItem
-                {
-                    Author = "",
-                    AvatarUrl = "",
-                    Tweet = "error, please retry...",
-                    Id = ""
-                };
-
-                this.TwitterItems.Add(twitterItem);
-            }
-
-            this.tweetQueryString = string.Format("?q=xboxone&max_id={0}&count=20", (Convert.ToInt64(this.TwitterItems.Last().Id) - 1));
-
+                this.TwitterItems.Add(tweet);
+            });
             this.IsLoading = false;
         }
     }
