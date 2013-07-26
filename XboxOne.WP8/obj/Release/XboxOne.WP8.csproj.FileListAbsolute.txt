@@ -131,3 +131,8 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\XboxOne.Core.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\XboxOne.Core.pdb
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.PlayerFramework.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.PlayerFramework.xml
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.Phone.Controls.Toolkit.pdb
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.Phone.Controls.Toolkit.xml
+C:\Projects\XboxOne\XboxOne.WP8\obj\Release\Views\YouTubeContentView.g.cs

@@ -25,6 +25,7 @@ namespace XboxOne.WP8.Views
             this.WebBrowser.LoadCompleted += WebBrowser_LoadCompleted;
             this.AdDisplay.Loaded += AdDisplay_Loaded;
             this.AdDisplay.ErrorOccurred += AdDisplay_ErrorOccurred;
+            FlurryWP8SDK.Api.LogEvent("Viewed Content");
         }
 
         void AdDisplay_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)

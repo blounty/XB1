@@ -16,9 +16,9 @@ namespace XboxOne.Core.ViewModels
         : MvxViewModel
     {
         private string gameId;
-        private GameService gameService;
-        private NewsService newsService;
-
+        private IGameService gameService;
+        private INewsService newsService;
+        private IVideoService videoService;
         private Game game;
 
         public Game Game
@@ -38,6 +38,13 @@ namespace XboxOne.Core.ViewModels
             set { newsItems = value; RaisePropertyChanged(() => this.NewsItems); }
         }
 
+        private ObservableCollection<Video> videos;
+        public ObservableCollection<Video> Videos
+        {
+            get { return videos; }
+            set { videos = value; RaisePropertyChanged(() => this.Videos); }
+        }
+
         private bool isLoading;
 
         public bool IsLoading
@@ -50,11 +57,13 @@ namespace XboxOne.Core.ViewModels
             }
         }
 
-        public GameViewModel()
+        public GameViewModel(IGameService gameService, INewsService newsService, IVideoService videoService)
         {
-            this.gameService = new GameService();
-            this.newsService = new NewsService();
+            this.gameService = gameService;
+            this.newsService = newsService;
+            this.videoService = videoService;
             this.NewsItems = new ObservableCollection<NewsItem>();
+            this.Videos = new ObservableCollection<Video>();
         }
 
         public async void Init(string gameId)
@@ -79,6 +88,8 @@ namespace XboxOne.Core.ViewModels
 
             await this.LoadNews();
 
+            await this.LoadVideos();
+
             this.IsLoading = false;
         }
 
@@ -95,9 +106,27 @@ namespace XboxOne.Core.ViewModels
             }
         }
 
+        private async Task LoadVideos()
+        {
+            var videos = await this.videoService.LoadVideosByGameId(this.gameId);
+
+            foreach (var video in videos)
+            {
+                if (!this.Videos.Any(x => x.Id == video.Id))
+                {
+                    this.Videos.Add(video);
+                }
+            }
+        }
+
         public void NewsItemSelected(NewsItem newsItem)
         {
             this.ShowViewModel<WebContentViewModel>(new { contentUrl = newsItem.Url });
+        }
+
+        public void VideoSelected(Video video)
+        {
+            this.ShowViewModel<YouTubeContentViewModel>(new { videoId = video.VideoId });
         }
 
         public async Task AddSecondaryTile()

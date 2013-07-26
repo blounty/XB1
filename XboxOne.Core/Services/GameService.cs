@@ -8,7 +8,7 @@ using XboxOne.Core.Models;
 
 namespace XboxOne.Core.Services
 {
-    public class GameService
+    public class GameService : XboxOne.Core.Services.IGameService
     {
         public async Task<List<Game>> LoadGames()
         {

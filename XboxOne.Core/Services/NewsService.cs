@@ -8,7 +8,7 @@ using XboxOne.Core.Models;
 
 namespace XboxOne.Core.Services
 {
-    public class NewsService
+    public class NewsService : XboxOne.Core.Services.INewsService
     {
         public async Task<List<NewsItem>> LoadNews(int limit, int skip)
         {

@@ -23,6 +23,7 @@ namespace XboxOne.WP8.Views
             InitializeComponent();
 
             this.Loaded += GameView_Loaded;
+            
         }
 
         void GameView_Loaded(object sender, RoutedEventArgs e)
@@ -45,7 +46,8 @@ namespace XboxOne.WP8.Views
             BindingOperations.SetBinding(
                 progressIndicator, ProgressIndicator.IsIndeterminateProperty, binding);
 
-            progressIndicator.Text = "Loading content..."; 
+            progressIndicator.Text = "Loading content...";
+
         }
 
         private void NewsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -68,6 +70,26 @@ namespace XboxOne.WP8.Views
         private async void Pin_Click(object sender, EventArgs e)
         {
             await ((GameViewModel)this.ViewModel).AddSecondaryTile();
+        }
+
+        private void VideosList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                var addedItem = e.AddedItems[0];
+                if (addedItem is Video)
+                {
+                    ((GameViewModel)this.ViewModel).VideoSelected((Video)addedItem);
+                }
+            }
+        }
+
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+            this.NewsList.SelectedItem = null;
+            this.VideosList.SelectedItem = null;
+            FlurryWP8SDK.Api.LogEvent("Viewed Game", new List<FlurryWP8SDK.Models.Parameter> { new FlurryWP8SDK.Models.Parameter("GameName", ((GameViewModel)this.ViewModel).Game.Name) });
         }
     }
 }

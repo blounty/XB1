@@ -17,10 +17,11 @@ namespace XboxOne.Core.ViewModels
     public class HomeViewModel 
 		: MvxViewModel
     {
-        private TwitterService twitterService;
+        private ITwitterService twitterService;
 
-        private GameService gameService;
+        private IGameService gameService;
 
+        private INewsService newsService;
         private ObservableCollection<NewsItem> newsItems;
         public ObservableCollection<NewsItem> NewsItems
         {
@@ -56,13 +57,17 @@ namespace XboxOne.Core.ViewModels
         }
 
 
-        public HomeViewModel()
+        public HomeViewModel(IGameService gameService, ITwitterService twitterService, INewsService newsService)
         {
-            this.twitterService = new TwitterService("xboxone", 20);
+            this.newsService = newsService;
+            this.twitterService = twitterService;
+            this.twitterService.SearchTerm = "xboxone";
+            this.twitterService.ReturnCount = 10;
+
             this.NewsItems = new ObservableCollection<NewsItem>();
             this.TwitterItems = new ObservableCollection<TwitterItem>();
             this.Games = new ObservableCollection<Game>();
-            this.gameService = new GameService();
+            this.gameService  = gameService;
         }
 
         public void NewsItemSelected(NewsItem newsItem)
@@ -117,8 +122,7 @@ namespace XboxOne.Core.ViewModels
         {
             this.IsLoading = true;
 
-            var newsService = new NewsService();
-            var newsItems = await newsService.LoadNews(limit, skip);
+            var newsItems = await this.newsService.LoadNews(limit, skip);
 
             foreach (var newsItem in newsItems)
             {

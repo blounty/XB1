@@ -16,4 +16,3 @@ C:\Projects\XboxOne\XboxOne.Core\bin\Debug\System.Net.Http.Primitives.xml
 C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.csproj.App.config
 C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.dll
 C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.pdb
-C:\Projects\XboxOne\XboxOne.Core\obj\Debug\XboxOne.Core.csprojResolveAssemblyReference.cache

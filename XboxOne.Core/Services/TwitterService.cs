@@ -13,7 +13,7 @@ using XboxOne.Core.Models;
 
 namespace XboxOne.Core.Services
 {
-    public class TwitterService
+    public class TwitterService : XboxOne.Core.Services.ITwitterService
     {
         const string TWEET_AUTH_URL = "https://api.twitter.com/oauth2/token";
 
@@ -24,12 +24,6 @@ namespace XboxOne.Core.Services
         public string SearchTerm { get; set; }
 
         public int ReturnCount { get; set; }
-
-        public TwitterService(string searchTerm, int returnCount)
-        {
-            this.SearchTerm = searchTerm;
-            this.ReturnCount = returnCount;
-        }
 
         public void ResetFilters()
         {
