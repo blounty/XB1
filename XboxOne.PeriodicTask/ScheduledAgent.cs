@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using Microsoft.Phone.Scheduler;
-using XboxOne.Core.WP8.Services;
+using XboxOne.Core.Services;
 using Microsoft.Phone.Shell;
 using System.Linq;
 using Parse;

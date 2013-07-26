@@ -6,11 +6,9 @@ C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Parse.Phone.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\System.Net.Http.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\System.Net.Http.Extensions.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\System.Net.Http.Primitives.dll
-C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\XboxOne.Core.WP8.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Cirrious.MvvmCross.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Cirrious.CrossCore.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Cirrious.MvvmCross.Plugins.Bookmarks.dll
-C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\XboxOne.Core.WP8.pdb
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Newtonsoft.Json.xml
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Parse.xml
 C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\Parse.Phone.xml
@@ -20,3 +18,5 @@ C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\System.Net.Http.Primitives.xm
 C:\Projects\XboxOne\XboxOne.PeriodicTask\obj\Debug\XboxOne.PeriodicTask.csprojResolveAssemblyReference.cache
 C:\Projects\XboxOne\XboxOne.PeriodicTask\obj\Debug\XboxOne.PeriodicTask.dll
 C:\Projects\XboxOne\XboxOne.PeriodicTask\obj\Debug\XboxOne.PeriodicTask.pdb
+C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\XboxOne.Core.dll
+C:\Projects\XboxOne\XboxOne.PeriodicTask\Bin\Debug\XboxOne.Core.pdb

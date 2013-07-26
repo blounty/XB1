@@ -20,19 +20,15 @@ C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Microsoft.Advertising.Mobile.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\microsoft.advertising.mobile.ui.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Microsoft.Phone.Controls.Maps.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\System.Windows.Interactivity.dll
-C:\Projects\xboxone\XboxOne.WP8\Bin\Release\XboxOne.Core.WP8.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\XboxOne.PeriodicTask.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Parse.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\System.Net.Http.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Newtonsoft.Json.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\System.Net.Http.Primitives.dll
-C:\Projects\xboxone\XboxOne.WP8\Bin\Release\XboxOne.Core.WP8.pdb
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\XboxOne.PeriodicTask.pdb
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Microsoft.Advertising.Mobile.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\microsoft.advertising.mobile.ui.xml
-C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Parse.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\System.Net.Http.xml
-C:\Projects\xboxone\XboxOne.WP8\Bin\Release\Newtonsoft.Json.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\System.Net.Http.Primitives.xml
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
 C:\Projects\xboxone\XboxOne.WP8\Bin\Release\da-DK\Microsoft.Advertising.Mobile.resources.dll
@@ -133,3 +129,5 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Microsoft.Phone.Controls.dll
 C:\Projects\XboxOne\XboxOne.WP8\obj\Release\Views\GameView.g.cs
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\Cirrious.MvvmCross.Plugins.Bookmarks.WindowsPhone.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\XboxOne.Core.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Release\XboxOne.Core.pdb

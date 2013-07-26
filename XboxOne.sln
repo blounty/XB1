@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.20617.1 PREVIEW
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxOne.WP8", "XboxOne.WP8\XboxOne.WP8.csproj", "{5D99A928-5D45-4744-823D-CE84BD5243DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxOne.Core.WP8", "XboxOne.Core.WP8\XboxOne.Core.WP8.csproj", "{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxOne.PeriodicTask", "XboxOne.PeriodicTask\XboxOne.PeriodicTask.csproj", "{D461EED4-32BE-4B33-9A4E-993334A043BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxOne.Core", "XboxOne.Core\XboxOne.Core.csproj", "{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,18 +35,6 @@ Global
 		{5D99A928-5D45-4744-823D-CE84BD5243DA}.Release|x86.ActiveCfg = Release|x86
 		{5D99A928-5D45-4744-823D-CE84BD5243DA}.Release|x86.Build.0 = Release|x86
 		{5D99A928-5D45-4744-823D-CE84BD5243DA}.Release|x86.Deploy.0 = Release|x86
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|ARM.Build.0 = Debug|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|x86.ActiveCfg = Debug|x86
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Debug|x86.Build.0 = Debug|x86
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|ARM.ActiveCfg = Release|ARM
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|ARM.Build.0 = Release|ARM
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|x86.ActiveCfg = Release|x86
-		{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}.Release|x86.Build.0 = Release|x86
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -61,6 +47,14 @@ Global
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Release|ARM.Build.0 = Release|ARM
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Release|x86.ActiveCfg = Release|x86
 		{D461EED4-32BE-4B33-9A4E-993334A043BD}.Release|x86.Build.0 = Release|x86
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

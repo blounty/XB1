@@ -1,23 +1,21 @@
 using Cirrious.CrossCore.IoC;
-using Microsoft.WindowsAzure.MobileServices;
+using Parse;
 
 namespace XboxOne.Core
 {
     public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
     {
-        public static MobileServiceClient MobileService = new MobileServiceClient(
-            "https://xboxone.azure-mobile.net/",
-            "KHxrrhkbhUjfSjPnhxDZVkmpmXYLlN50"
-            );
 
         public override void Initialize()
         {
+            ParseClient.Initialize("5yU6Uf5QqT066zOB52KBZBAhf9qnrRPVlZrRzvp7", "pjPDnc7GZKERP3yiAw9sP3lXy7RRXwEaG4CGN8Qp");
+
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.HomeViewModel>();
         }
     }
 }

@@ -25,19 +25,15 @@ C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Microsoft.Phone.Controls.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Windows.Interactivity.dll
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.PeriodicTask.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Net.Http.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Net.Http.Primitives.dll
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.WP8.pdb
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.PeriodicTask.pdb
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Microsoft.Advertising.Mobile.xml
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\microsoft.advertising.mobile.ui.xml
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Parse.xml
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Net.Http.xml
-C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\Newtonsoft.Json.xml
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\System.Net.Http.Primitives.xml
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
@@ -133,3 +129,5 @@ C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\en\XboxOne.WP8.resources.dll
 C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\XboxOne.WP8.dll
 C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\XboxOne.WP8.pdb
 C:\Projects\XboxOne\XboxOne.WP8\obj\Debug\XapCacheFile.xml
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.dll
+C:\Projects\XboxOne\XboxOne.WP8\Bin\Debug\XboxOne.Core.pdb

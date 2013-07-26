@@ -125,6 +125,9 @@
     <Reference Include="Cirrious.MvvmCross.WindowsPhone">
       <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\sl4-wp71\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>
     </Reference>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\lib\FlurryWP8SDK.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Parse.1.2.5\lib\wp8\Newtonsoft.Json.dll</HintPath>

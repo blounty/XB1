@@ -12,8 +12,7 @@ namespace XboxOne.Core.WP8.Services
     {
         public async Task<List<Game>> LoadGames()
         {
-            var query = ParseObject.GetQuery("Game")
-                .OrderByDescending(x => x["Name"]);
+            var query = ParseObject.GetQuery("Game");
  
             IEnumerable<ParseObject> result = new List<ParseObject>();
 
@@ -37,7 +36,7 @@ namespace XboxOne.Core.WP8.Services
                 games.Add(game);
             }
 
-            return games;
+            return games.OrderBy(g => g.Name).ToList();
         }
 
         public async Task<Game> LoadGameById(string id)

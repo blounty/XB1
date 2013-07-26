@@ -15,7 +15,7 @@
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
-    <AssemblyPart x:Name="XboxOne.Core.WP8" Source="XboxOne.Core.WP8.dll" />
+    <AssemblyPart x:Name="XboxOne.Core" Source="XboxOne.Core.dll" />
     <AssemblyPart x:Name="XboxOne.PeriodicTask" Source="XboxOne.PeriodicTask.dll" />
     <AssemblyPart x:Name="Parse" Source="Parse.dll" />
     <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />

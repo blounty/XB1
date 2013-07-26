@@ -215,9 +215,9 @@
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XboxOne.Core.WP8\XboxOne.Core.WP8.csproj">
-      <Project>{D9CA2F79-A245-4C35-B902-4DCB5384F2C1}</Project>
-      <Name>XboxOne.Core.WP8</Name>
+    <ProjectReference Include="..\XboxOne.Core\XboxOne.Core.csproj">
+      <Project>{EBD23A3B-E08F-41E5-B4F8-5111AC87AF0F}</Project>
+      <Name>XboxOne.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\XboxOne.PeriodicTask\XboxOne.PeriodicTask.csproj">
       <Project>{D461EED4-32BE-4B33-9A4E-993334A043BD}</Project>
