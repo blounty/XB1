@@ -68,7 +68,7 @@ namespace XboxOne.WP8
         {
             RootFrame.Navigating += RootFrameOnNavigating;
 
-            FlurryWP8SDK.Api.StartSession("7B4FZFCPZB4MFWWC5MKW");
+            FlurryWP8SDK.Api.StartSession("Your Flurry Key Here");
 
             Microsoft.Phone.Scheduler.PeriodicTask tileUpdaterPeriodicTask;
 
@@ -104,7 +104,7 @@ namespace XboxOne.WP8
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            FlurryWP8SDK.Api.StartSession("7B4FZFCPZB4MFWWC5MKW");
+            FlurryWP8SDK.Api.StartSession("");
         }
 
         // Code to execute when the application is deactivated (sent to background)

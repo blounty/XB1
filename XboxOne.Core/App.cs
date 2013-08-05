@@ -9,7 +9,7 @@ namespace XboxOne.Core
 
         public override void Initialize()
         {
-            ParseClient.Initialize("5yU6Uf5QqT066zOB52KBZBAhf9qnrRPVlZrRzvp7", "pjPDnc7GZKERP3yiAw9sP3lXy7RRXwEaG4CGN8Qp");
+            ParseClient.Initialize("","");
 
             CreatableTypes()
                 .EndingWith("Service")
